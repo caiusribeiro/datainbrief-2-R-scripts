@@ -4,4 +4,4 @@ This notebook includes code that I have used in the past and aim to improve.
 
 Packages used *plyr*, *dplyr*, *minpack.lm*, *readbulk*, and *GLDEX*. See citation at the end of script.
 
-[My GitHub repository for this notebook.](https://github.com/c-riku/datainbrief-2-R-scripts)
+[My GitHub repository for this notebook.](https://github.com/caiusribeiro/datainbrief-2-R-scripts)
