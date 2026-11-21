@@ -1,16 +1,30 @@
 ---
-title: "Datainbrief 2 Notebook"
+title: "Hemiboreal forest fire GHG analysis"
 author: "Caius Ribeiro-Kumara"
 output:
-  prettydoc::html_pretty:
-    theme: cayman
-    highlight: github
+  html_document:
+    theme:
+      version: 5
+      preset: bootstrap
+      bg: "#ffffff"
+      fg: "#1c1a24"
+      primary: "#5b2fc9"
+      base_font: !expr bslib::font_collection("system-ui", "-apple-system", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "sans-serif")
+      heading_font: !expr bslib::font_collection("system-ui", "-apple-system", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "sans-serif")
+      code_font: !expr bslib::font_collection("ui-monospace", "SFMono-Regular", "Menlo", "Consolas", "monospace")
+    highlight: textmate
+    css: notebook.css
+    includes:
+      before_body: nav.html
+    toc: true
+    toc_float:
+      collapsed: false
+    code_folding: hide
     fig_caption: true
     fig_width: 5
     fig_height: 5
     df_print: paged
     number_sections: true
-    toc: true
 ---
 
 ***
