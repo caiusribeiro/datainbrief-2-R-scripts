@@ -1,0 +1,162 @@
+/* Notebook styles: colours and fonts follow caiusribeiro.github.io */
+:root {
+  --nb-bg: #f8f7fb;
+  --nb-surface: #ffffff;
+  --nb-text: #1c1a24;
+  --nb-muted: #5c586b;
+  --nb-border: #e5e2ee;
+  --nb-accent: #5b2fc9;
+  --nb-accent-strong: #4a22ad;
+  --nb-accent-soft: #eee8fc;
+  --nb-hero-bg: #16131f;
+  --nb-hero-text: #f3f1f8;
+  --nb-hero-muted: #b9b3cc;
+  --nb-hero-accent: #b49cff;
+  --nb-radius: 14px;
+}
+
+body {
+  background: var(--nb-bg);
+  color: var(--nb-text);
+  line-height: 1.65;
+}
+
+a { color: var(--nb-accent); }
+a:hover { color: var(--nb-accent-strong); }
+
+/* Link back to the site */
+.site-bar {
+  margin: 1.25rem 0 0;
+}
+.site-bar a {
+  color: var(--nb-accent);
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+}
+.site-bar a:hover,
+.site-bar a:focus-visible { color: var(--nb-accent-strong); text-decoration: underline; }
+
+.main-container { max-width: 1240px; }
+
+/* Title block */
+#header {
+  background: var(--nb-hero-bg);
+  color: var(--nb-hero-text);
+  border-radius: var(--nb-radius);
+  padding: 1.75rem 2rem;
+  margin: 0.75rem 0 2rem;
+}
+#header .title {
+  color: var(--nb-hero-text);
+  font-weight: 700;
+  font-size: 2.1rem;
+  line-height: 1.25;
+  margin: 0;
+}
+#header .author {
+  color: var(--nb-hero-muted);
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 0.6rem 0 0;
+}
+#header .btn-group { float: right; margin: 0 0 0.75rem 1rem; }
+
+/* Headings */
+h1, h2, h3, h4 { color: var(--nb-text); font-weight: 650; }
+.section.level1 > h1 {
+  font-size: 1.75rem;
+  margin-top: 2.5rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--nb-border);
+}
+.section.level2 > h2 { font-size: 1.35rem; margin-top: 2rem; }
+.header-section-number { color: var(--nb-accent); margin-right: 0.35em; }
+
+/* Section headings already carry a rule, so the *** separators are hidden */
+.main-container hr { display: none; }
+
+/* Code and printed output */
+pre {
+  background: var(--nb-surface);
+  border: 1px solid var(--nb-border);
+  border-radius: 10px;
+  padding: 0.9rem 1rem;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+pre:not(.r):not(.sourceCode),
+pre > code:not(.sourceCode) {
+  background: var(--nb-accent-soft);
+}
+pre:not(.r):not(.sourceCode) { border-color: transparent; }
+
+/* Code folding buttons */
+.code-folding-btn,
+.btn.btn-default,
+.btn.btn-light {
+  border: 1px solid var(--nb-border);
+  background: var(--nb-surface);
+  color: var(--nb-accent);
+  border-radius: 999px;
+  font-size: 0.8rem;
+  padding: 0.2rem 0.8rem;
+}
+.code-folding-btn:hover,
+.btn.btn-default:hover,
+.btn.btn-light:hover { background: var(--nb-accent-soft); color: var(--nb-accent-strong); }
+
+/* Figures */
+img { max-width: 100%; height: auto; }
+.figure,
+p:has(> img:only-child) {
+  display: block;
+  background: var(--nb-surface);
+  border: 1px solid var(--nb-border);
+  border-radius: var(--nb-radius);
+  padding: 1rem;
+  margin: 1.5rem 0;
+  text-align: center;
+}
+.figure img,
+p:has(> img:only-child) img {
+  width: 100%;
+  max-width: 600px;
+}
+.caption,
+.figure p.caption {
+  color: var(--nb-muted);
+  font-size: 0.92rem;
+  margin: 0.75rem 0 0;
+}
+
+/* Floating table of contents */
+.tocify {
+  background: var(--nb-surface);
+  border: 1px solid var(--nb-border);
+  border-radius: var(--nb-radius);
+  padding: 0.5rem 0;
+  font-size: 0.95rem;
+}
+.tocify .list-group-item {
+  border: 0;
+  background: transparent;
+  color: var(--nb-muted);
+  padding: 0.35rem 1rem;
+}
+.tocify .list-group-item:hover { color: var(--nb-accent); background: var(--nb-accent-soft); }
+.tocify .list-group-item.active,
+.tocify .list-group-item.active:focus,
+.tocify .list-group-item.active:hover {
+  background: var(--nb-accent-soft);
+  color: var(--nb-accent-strong);
+  font-weight: 600;
+  box-shadow: inset 3px 0 0 var(--nb-accent);
+}
+
+@media (max-width: 767.98px) {
+  #header { padding: 1.25rem; }
+  #header .title { font-size: 1.55rem; }
+  #header .btn-group { float: none; margin: 0 0 0.75rem; }
+  pre { font-size: 0.8rem; }
+}
