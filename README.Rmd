@@ -3,4 +3,4 @@ output: github_document
 ---
 
 
-[My notebooks](https://c-riku.github.io/datainbrief-2-R-scripts/)
+[My notebooks](https://caiusribeiro.github.io/datainbrief-2-R-scripts/)
